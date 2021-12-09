@@ -1,21 +1,17 @@
 public class Attraction {
     //instance fields
-    //FINALS
-    final int NUM_OF_RIDES = 3; //total rides
-    final int MAX_HOURS = 11; //how long park is open (hours) ; profits
-    //general fields for a ride
-    private int rideSpeed; //speed of ride ; puke factor
-    private double rideLength; //length of an attraction ; puke factor
-    private int rideHeight; //height of ride ; puke factor
-    private double ticketsToRide; //ticket cost for an attraction ; profits ; getTickets (tickets that user has)
+    private double rideSpeed; //speed of ride ; puke factor ; mph
+    private double rideLength; //length of an attraction ; puke factor ; minutes
+    private double rideHeight; //height of ride ; puke factor ; feet
+    private int ticketsToRide; //ticket cost for an attraction ; profits ; getTickets (tickets that user has)
 
-    private int ticketsPurchased; //number of tickets purchased ; track users tickets ; 
-    private int numAttendants; //number of people going to park
+    private int totalTickets; //number of tickets purchased ; track users tickets ; 
     private int riderPerHour; // riders on the ride per hour ; profits
 
     private int ticketSpent; //number of tickets cost by each ride
     private double utilityCost; //cost of maintaining an attraction
  
+    //Attraction constructor
     public Attraction(int ticketsToRide,double rideLength,int ridePHour)
     {
         this.ticketsToRide = ticketsToRide;
@@ -23,52 +19,47 @@ public class Attraction {
 
     }
 
-    public int getAttendants(int numAttend)
+    //get methods
+    public double getUtilityCost(double costUtility)
     {
-    numAttendents = numAttend;
-    return numAttendants;
+        utilityCost = costUtility;
+        return utilityCost;
     }
-    public int getNumberRides()
-    {
-    return NUM_OF_RIDES;
-    }
-    public int getMaxHours()
-    {
-    return MAX_HOURS;
-    }
+
+    //ticket methods
     public int numTicket(int ticketPurchased)
     {
-    this.numTicket = ticketPurchased;
-    return numTicket;
-    }
-    public int RidersHour(int riders)
-    {
-    riderPerHour = riders;
-    return riderPerHour;
-    }
-    public int RideHeight(int height)
-    {
-    rideHeight = height;
-    return rideHeight;
+        totalTickets = ticketPurchased;
+        return totalTickets;
     }
     public int ticketPerRide(int ticket)
     {
-    ticketSpent = ticket;
-    return ticketSpent;
+        ticketSpent = ticket;
+        return ticketSpent;
     }
     public double ticketCost(double ticketCostAmount)
     {
-    this.ticketCost = ticketCostAmount;
-    return ticketCost;
+        this.ticketCost = ticketCostAmount;
+        return ticketCost;
+    }
+
+    //puke factor method
+    public void PukeFactor(double speed, double length, ) {
+        
+    }
+    public int RidersHour(int riders)
+    {
+        riderPerHour = riders;
+        return riderPerHour;
+    }
+    public int RideHeight(int height)
+    {
+        rideHeight = height;
+        return rideHeight;
     }
     public double rideLength(double rideTime)
     {
-    rideLength = rideTime;
-    return rideLength;
-    }
-    public double getUtilityCost(double costUtility)
-    {
-    utilityCost = costUtility;
-    return utilityCost;
+        rideLength = rideTime;
+        return rideLength;
     }
  }

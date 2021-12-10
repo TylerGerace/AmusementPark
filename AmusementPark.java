@@ -6,7 +6,10 @@ public class AmusementPark {
 
     private int numAttendants; //number of people going to park
     private int totalTickets; //total tickets the user has
-
+   public AmusementPark()
+	{
+		
+	}
     //get methods
     public int getAttendants() 
     {

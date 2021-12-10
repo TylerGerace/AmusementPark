@@ -1,4 +1,4 @@
-public class Attraction {
+public class Attraction extends AmusementPark {
     //instance fields
     private double rideSpeed; //speed of ride ; puke factor ; mph
     private double rideLength; //length of an attraction ; puke factor ; minutes
@@ -37,14 +37,8 @@ public class Attraction {
         ticketSpent = ticket;
         return ticketSpent;
     }
-    public double ticketCost(double ticketCostAmount)
-    {
-        this.ticketCost = ticketCostAmount;
-        return ticketCost;
-    }
-
     //puke factor method
-    public void PukeFactor(double speed, double length, ) {
+    public void PukeFactor(double speed, double length ) {
         
     }
     public int RidersHour(int riders)
@@ -52,7 +46,7 @@ public class Attraction {
         riderPerHour = riders;
         return riderPerHour;
     }
-    public int RideHeight(int height)
+    public double RideHeight(int height)
     {
         rideHeight = height;
         return rideHeight;

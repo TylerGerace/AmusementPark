@@ -5,6 +5,7 @@ public class AmusementPark {
     final double COST_PER_TICKET = 5; //5 dollars per ticket
 
     private int numAttendants; //number of people going to park
+    private int totalTickets; //total tickets the user has
 
     //get methods
     public int getAttendants() 
@@ -14,6 +15,13 @@ public class AmusementPark {
         numAttendants = ((int) (Math.random() * (MAX - MIN + 1) + MIN));
         return numAttendants;
     }
+    public int getTickets(){
+        return totalTickets;
+    }
+    public boolean checkTickets(){ //checks if tickets == 0
+        //not done
+    }
+    
     public double getTicketCost()
     {
         return COST_PER_TICKET;

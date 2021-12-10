@@ -4,27 +4,25 @@ public class Attraction extends AmusementPark {
     private double rideLength; //length of an attraction ; puke factor ; minutes
     private double rideHeight; //height of ride ; puke factor ; feet
     private int ticketsToRide; //ticket cost for an attraction ; profits ; getTickets (tickets that user has)
-
     private int totalTickets; //number of tickets purchased ; track users tickets ; 
-    private int riderPerHour; // riders on the ride per hour ; profits
-
     private int ticketSpent; //number of tickets cost by each ride
-    private double utilityCost; //cost of maintaining an attraction
- 
+    
     //Attraction constructor
-    public Attraction(int ticketsToRide,double rideLength,int ridePHour)
+    public Attraction(int ticketsToRide,double rideLength,double rideHeight,double rideSpeed)
     {
         this.ticketsToRide = ticketsToRide;
         this.rideLength = rideLength;
+        this.rideHeight = rideHeight;
+        this.rideSpeed = rideSpeed;
+    }
 
+    //Ride Attraction Method
+    public int rideAttraction(int userTickets, Attraction attraction){
+        int tickets = userTickets;
+        return tickets - ticketToRide();
     }
 
     //get methods
-    public double getUtilityCost(double costUtility)
-    {
-        utilityCost = costUtility;
-        return utilityCost;
-    }
 
     //ticket methods
     public int numTicket(int ticketPurchased)
@@ -32,10 +30,9 @@ public class Attraction extends AmusementPark {
         totalTickets = ticketPurchased;
         return totalTickets;
     }
-    public int ticketPerRide(int ticket)
+    public int ticketToRide()
     {
-        ticketSpent = ticket;
-        return ticketSpent;
+        return ticketToRide();
     }
     //puke factor method
     public void PukeFactor(double speed, double length ) {

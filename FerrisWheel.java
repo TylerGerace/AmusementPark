@@ -22,8 +22,13 @@ class FerrisWheel extends Attraction{
 			}
 			 
 		}
+		 
+			
+		
+
  
 	    }
+
  
  
  

@@ -6,14 +6,16 @@ public class Attraction extends AmusementPark {
     private int ticketsToRide; //ticket cost for an attraction ; profits ; getTickets (tickets that user has)
     private int totalTickets; //number of tickets purchased ; track users tickets ; 
     private int ticketSpent; //number of tickets cost by each ride
+    private int riderPerHour;
     
     //Attraction constructor
-    public Attraction(int ticketsToRide,double rideLength,double rideHeight,double rideSpeed)
+    public Attraction(int ticketsToRide,double rideLength,double rideHeight,double rideSpeed, int riderPerHour)
     {
         this.ticketsToRide = ticketsToRide;
         this.rideLength = rideLength;
         this.rideHeight = rideHeight;
         this.rideSpeed = rideSpeed;
+        this.riderPerHour = riderPerHour;
     }
 
     //Ride Attraction Method

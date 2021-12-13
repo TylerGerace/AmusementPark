@@ -21,8 +21,8 @@ public class AmusementPark {
     public int getTickets(){
         return totalTickets;
     }
-    public boolean checkTickets(){ //checks if tickets == 0
-        //not done
+    public boolean checkTickets(){
+    	//unfinished
     }
     
     public double getTicketCost()

@@ -1,7 +1,7 @@
 class FerrisWheel extends Attraction{
 	
-	 public FerrisWheel(int ticketsToRide, double rideLength, int ridePHour, int rideSpeed) {
-		super(2 , 12, 300, 90);
+	 public FerrisWheel(int ticketsToRide, double rideLength, double ridePHour, double rideSpeed,double rideHeight ) {
+		super(2 , 12, 300, 90, 220);
 	}
 	 AmusementPark connect = new AmusementPark();
 
@@ -28,8 +28,6 @@ class FerrisWheel extends Attraction{
 
  
 	    }
-
- 
  
  
  

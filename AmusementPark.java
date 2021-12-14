@@ -21,19 +21,19 @@ public class AmusementPark {
     public int getTickets(){
         return totalTickets;
     }
-    public boolean checkTickets(){
+    public boolean checkTickets(){  //computer determines whether visitor has enough tickets for their desired rides
     	//unfinished
     }
     
-    public double getTicketCost()
+    public double getTicketCost() //returns cost of ticket
     {
         return COST_PER_TICKET;
     }
-    public int getNumberRides()
+    public int getNumberRides() //returns number of rides in the park
     {
         return NUM_OF_RIDES;
     }
-    public int getMaxHours()
+    public int getMaxHours() //returns park hours
     {
         return MAX_HOURS;
     }

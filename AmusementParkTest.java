@@ -66,14 +66,14 @@ public class AmusementParkTest {
                     if (choice == 0){
                         usersTickets = usersTickets-theBullet.getCost();
                         //checks if user has enough tickets, if not sim is exited
-                        if(usersTickets<=0){visitor.noTickets(); done=true; break;}
+                        if(usersTickets<0){visitor.noTickets(); done=true; break;}
                         else theBullet.Ride();
                     }
                     //if they choose Ferris Wheel
                     if (choice == 1){
-                        usersTickets = usersTickets-theBullet.getCost();
+                        usersTickets = usersTickets-theWheel.getCost();
                         //checks if user has enough tickets, if not sim is exited
-                        if(usersTickets<=0){visitor.noTickets(); done=true; break;}
+                        if(usersTickets<0){visitor.noTickets(); done=true; break;}
                         else{
                             int riders =
                             Integer.parseInt(JOptionPane.showInputDialog("How many people are riding?"));
@@ -82,9 +82,9 @@ public class AmusementParkTest {
                     }
                     //if they choose Merry go round
                     if (choice == 2){
-                        usersTickets = usersTickets-theBullet.getCost();
+                        usersTickets = usersTickets-theCarousel.getCost();
                         //checks if user has enough tickets, if not sim is exited
-                        if(usersTickets<=0){visitor.noTickets(); done=true; break;}
+                        if(usersTickets<0){visitor.noTickets(); done=true; break;}
                         else{
                             int age = 
                             Integer.parseInt(JOptionPane.showInputDialog("What is your age?"));

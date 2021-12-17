@@ -10,9 +10,8 @@ class MerryGoRound extends Attraction{
      */
     public String JoyFactor(int age) {
         String message = "";
-        if (age <= 12) {message = "\n\nYou greatly enjoyed the ride";}
-        if (age>12&&age<21) {message = "\n\nYou enjoyed the ride";}
-        else {message = "\n\nThe ride was okay";}
+        if (age<=13) {message = "\n\nYou greatly enjoyed the ride";}
+        else {message = "\n\nYou enjoyed the ride";}
         return message;
     } 
     public String Ride(int age){

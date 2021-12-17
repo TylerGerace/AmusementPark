@@ -8,7 +8,7 @@ public class RollerCoaster extends Attraction{
            speed = aSpeed;
            height = aHeight;
            speed = aSpeed;
-       } 
+        } 
     /**
      * unique method that uses properities to make pukefactor
      * @return chance based on 60%speed/30%length/10%height

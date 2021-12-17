@@ -1,40 +1,25 @@
-public class AmusementPark {
+import javax.swing.JOptionPane;
+
+class AmusementPark {
     //instance fields
-    final int NUM_OF_RIDES = 3; //total rides
-    final int MAX_HOURS = 11; //how long park is open (hours) ; profits
     final double COST_PER_TICKET = 5; //5 dollars per ticket
 
-    private int numAttendants; //number of people going to park
-    private int totalTickets; //total tickets the user has
-   public AmusementPark()
-	{
-		
-	}
-    //get methods
-    public int getAttendants() 
-    {
-        //return random amount of attendants based of avg low & avg high
-        final int MAX = 20000; final int MIN = 5000;
-        numAttendants = ((int) (Math.random() * (MAX - MIN + 1) + MIN));
-        return numAttendants;
+    private int usersTickets; //total tickets the user has
+
+    //constructor
+    public AmusementPark(int ticketsBought){
+        usersTickets = ticketsBought;
     }
+    /** @return user's total tickets */
     public int getTickets(){
-        return totalTickets;
+        return usersTickets;
     }
-    public boolean checkTickets(){  //computer determines whether visitor has enough tickets for their desired rides
-    	//unfinished
+    public String noTickets(){
+        JOptionPane.showConfirmDialog(null,"You do not have enough tickets", null, JOptionPane.DEFAULT_OPTION);
+        return "";
     }
-    
-    public double getTicketCost() //returns cost of ticket
-    {
+    //get ticket costs
+    public double getTicketCost(){
         return COST_PER_TICKET;
-    }
-    public int getNumberRides() //returns number of rides in the park
-    {
-        return NUM_OF_RIDES;
-    }
-    public int getMaxHours() //returns park hours
-    {
-        return MAX_HOURS;
     }
 }

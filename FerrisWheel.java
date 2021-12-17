@@ -1,36 +1,21 @@
+import javax.swing.JOptionPane;
+
 class FerrisWheel extends Attraction{
-	
-	 public FerrisWheel(int ticketsToRide, double rideLength, double ridePHour, double rideSpeed,double rideHeight ) {
-		super(2 , 12, 300, 90, 220);
-	}
-	 AmusementPark connect = new AmusementPark();
-
-
-		int Romantic;
-		 
-		 //unique method for Ferris Wheel subclass has an equation based on user input to determine romantic factor 
-		public void romanticRating()
-		{
-			if(connect.getTickets()%2 == 0)
-			{
-			System.out.println("romantic factor is 10/10");
-			
-			}
-			else 
-			{
-			System.out.println("romantic factor is 5/10");
-			}
-			 
-		}
-		 
-			
-		
-
- 
-	    }
- 
- 
- 
- 
- 
- 
+    public FerrisWheel(String aName, int cost, double aLength, double aHeight, double aSpeed) {
+        super(aName , cost, aLength, aHeight, aSpeed);
+    }
+    /**
+     * unique method that returns romantic factor based on @param riders
+     * @return romantic facters based on # of riders
+     */
+    public String romanticFactor(int riders){
+        if (riders == 2){return "\n\nThe ride was romantic";}
+        else return "";
+    }
+    public String Ride(int riders){
+        String message =
+        "You rode "+getName()+" for "+getCost()+" tickets" + romanticFactor(riders);
+        JOptionPane.showConfirmDialog(null,message, null, JOptionPane.DEFAULT_OPTION);
+        return "";
+    }
+ }
